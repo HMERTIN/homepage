@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Henryk Mertin — SAP Consultant &amp; Project Manager</title>
+<meta name="description" content="Henryk Mertin — Senior SAP Consultant & Project Manager specializing in SAP Financials, FSCM, RE-FX / IFRS16, SAP AFC and DRC eReporting. 30+ years of SAP experience, based in Berlin, Germany." />
+<meta name="theme-color" content="#1B1D22" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%231B1D22'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='15' fill='%235C82D1' text-anchor='middle'%3EHM%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --bg:#1B1D22;
+    --surface:#23262C;
+    --surface-2:#2A2E35;
+    --hairline:#383D46;
+    --hairline-soft:rgba(56,61,70,0.55);
+    --text:#E8ECF1;
+    --text-dim:#8B95A3;
+    --accent:#5C82D1;
+    --accent-soft:rgba(92,130,209,0.14);
+    --accent-2:#98A2B3;
+    --accent-2-soft:rgba(152,162,179,0.16);
+    --font-display:'Space Grotesk', sans-serif;
+    --font-body:'IBM Plex Sans', sans-serif;
+    --font-mono:'IBM Plex Mono', monospace;
+    --maxw:1120px;
+  }
+
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; background:var(--bg); min-height:100%; }
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--font-body);
+    font-size:16px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    min-height:100vh;
+  }
+  h1,h2,h3{ font-family:var(--font-display); font-weight:700; line-height:1.15; margin:0; }
+  p{ margin:0; }
+  a{ color:inherit; text-decoration:none; }
+  ul{ list-style:none; margin:0; padding:0; }
+  img{ max-width:100%; display:block; }
+
+  .container{ max-width:var(--maxw); margin:0 auto; padding:0 28px; }
+
+  .skip-link{
+    position:absolute; left:-999px; top:auto;
+    background:var(--accent); color:#0B1120; padding:10px 16px;
+    font-family:var(--font-mono); font-size:.85rem; z-index:999;
+    border-radius:4px;
+  }
+  .skip-link:focus{ left:16px; top:16px; }
+
+  a:focus-visible, button:focus-visible, summary:focus-visible{
+    outline:2px solid var(--accent);
+    outline-offset:3px;
+    border-radius:2px;
+  }
+
+  /* ---------- Nav ---------- */
+  .site-nav{
+    position:sticky; top:0; z-index:50;
+    background:var(--bg);
+    border-bottom:1px solid var(--hairline);
+  }
+  .site-nav .container{
+    display:flex; align-items:center; justify-content:space-between;
+    padding-top:16px; padding-bottom:16px;
+    flex-wrap:wrap; gap:12px;
+  }
+  .brand{
+    display:flex; align-items:center; gap:10px;
+    font-family:var(--font-mono); font-size:.9rem; letter-spacing:.03em;
+  }
+  .brand-mark{
+    width:30px; height:30px; border:1px solid var(--accent);
+    border-radius:6px; display:flex; align-items:center; justify-content:center;
+    color:var(--accent); font-size:.72rem; font-weight:600;
+  }
+  .nav-links{ display:flex; gap:26px; flex-wrap:wrap; }
+  .nav-links a{
+    font-family:var(--font-mono); font-size:.8rem; color:var(--text-dim);
+    letter-spacing:.02em; transition:color .2s ease;
+  }
+  .nav-links a:hover{ color:var(--accent); }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;
+    padding:96px 0 80px;
+    overflow:hidden;
+    background-color:var(--bg);
+    background-image:
+      linear-gradient(var(--hairline-soft) 1px, transparent 1px),
+      linear-gradient(90deg, var(--hairline-soft) 1px, transparent 1px);
+    background-size:44px 44px;
+  }
+  .hero::after{
+    content:'';
+    position:absolute; inset:0;
+    background:radial-gradient(60% 55% at 30% 20%, rgba(10,13,18,0) 0%, var(--bg) 78%);
+    pointer-events:none;
+  }
+  .hero .container{ position:relative; z-index:1; }
+
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:var(--font-mono); font-size:.78rem;
+    letter-spacing:.14em; text-transform:uppercase;
+    color:var(--accent);
+    margin-bottom:18px;
+  }
+  .eyebrow::before{
+    content:''; width:7px; height:7px; border-radius:50%;
+    background:var(--accent); display:inline-block;
+  }
+
+  .hero h1{
+    font-size:clamp(2.4rem, 6vw, 4.2rem);
+    letter-spacing:-0.01em;
+  }
+  .hero .role{
+    font-family:var(--font-mono);
+    color:var(--text-dim);
+    font-size:clamp(.95rem, 2vw, 1.1rem);
+    margin-top:18px;
+    max-width:640px;
+  }
+  .hero .role strong{ color:var(--text); font-weight:500; }
+
+  .terminal{
+    margin-top:36px;
+    display:inline-flex; align-items:center; gap:10px;
+    background:var(--surface);
+    border:1px solid var(--hairline);
+    border-radius:8px;
+    padding:14px 20px;
+    font-family:var(--font-mono);
+    font-size:.88rem;
+    max-width:100%;
+    overflow:hidden;
+  }
+  .terminal .prompt{ color:var(--accent-2); flex-shrink:0; }
+  .terminal .type-target{ color:var(--accent); white-space:nowrap; }
+  .terminal .cursor{
+    display:inline-block; width:7px; height:1em; background:var(--accent);
+    margin-left:2px; animation:blink 1s steps(1,end) infinite; flex-shrink:0;
+  }
+  @keyframes blink{ 50%{ opacity:0; } }
+
+  .cta-row{ display:flex; gap:16px; flex-wrap:wrap; margin-top:40px; }
+  .btn{
+    font-family:var(--font-mono); font-size:.85rem;
+    padding:13px 22px; border-radius:6px;
+    border:1px solid var(--hairline);
+    transition:border-color .2s ease, background .2s ease, color .2s ease;
+    display:inline-flex; align-items:center; gap:8px;
+  }
+  .btn-primary{ background:var(--accent); color:#0B1120; border-color:var(--accent); font-weight:600; }
+  .btn-primary:hover{ background:#4E6FB2; }
+  .btn-secondary{ color:var(--text); }
+  .btn-secondary:hover{ border-color:var(--accent-2); color:var(--accent-2); }
+
+  .stats{
+    display:grid; grid-template-columns:repeat(4,1fr);
+    gap:1px; background:var(--hairline);
+    margin-top:72px; border:1px solid var(--hairline); border-radius:10px; overflow:hidden;
+  }
+  .stat{ background:var(--surface); padding:22px 18px; }
+  .stat .num{ font-family:var(--font-mono); font-size:clamp(1.5rem,3vw,2rem); color:var(--accent); }
+  .stat .label{ font-size:.78rem; color:var(--text-dim); margin-top:6px; }
+
+  /* ---------- Sections ---------- */
+  .section{ padding:96px 0; border-top:1px solid var(--hairline); background:var(--bg); }
+  .section-head{ max-width:640px; margin-bottom:52px; }
+  .section-head h2{ font-size:clamp(1.7rem,3.4vw,2.3rem); margin-top:14px; }
+  .section-head .intro{ color:var(--text-dim); margin-top:16px; font-size:.98rem; }
+
+  .reveal{ opacity:1; transform:none; }
+  .reveal.visible{ opacity:1; transform:none; }
+
+  /* ---------- Profile ---------- */
+  .profile-grid{ display:grid; grid-template-columns:1.4fr 1fr; gap:56px; align-items:start; }
+  .profile-text p{ margin-bottom:18px; color:var(--text); }
+  .profile-text p:last-child{ margin-bottom:0; }
+  .pull-quote{
+    border-left:2px solid var(--accent);
+    padding:6px 0 6px 22px;
+    font-family:var(--font-display); font-weight:500;
+    font-size:1.15rem; color:var(--text);
+  }
+  .industries-box{
+    background:var(--surface); border:1px solid var(--hairline);
+    border-radius:10px; padding:26px;
+  }
+  .industries-box h3{ font-size:.85rem; font-family:var(--font-mono); color:var(--text-dim); letter-spacing:.06em; text-transform:uppercase; margin-bottom:16px; font-weight:600; }
+  .pill-row{ display:flex; flex-wrap:wrap; gap:8px; }
+  .pill{
+    font-family:var(--font-mono); font-size:.76rem;
+    padding:6px 12px; border-radius:20px;
+    background:var(--accent-2-soft); color:var(--accent-2);
+    border:1px solid rgba(79,143,166,0.3);
+  }
+
+  /* ---------- Expertise ---------- */
+  .card-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+  .card{
+    background:var(--surface); border:1px solid var(--hairline);
+    border-radius:10px; padding:28px; transition:border-color .2s ease, transform .2s ease;
+  }
+  .card:hover{ border-color:var(--accent-2); transform:translateY(-3px); }
+  .card .tag{
+    font-family:var(--font-mono); font-size:.72rem; letter-spacing:.05em;
+    color:var(--accent); background:var(--accent-soft);
+    display:inline-block; padding:4px 10px; border-radius:4px; margin-bottom:16px;
+  }
+  .card h3{ font-size:1.08rem; margin-bottom:10px; font-weight:600; }
+  .card p{ color:var(--text-dim); font-size:.92rem; }
+
+  .core-coverage{ margin-bottom:44px; }
+  .core-label, .specialist-label{
+    font-family:var(--font-mono); font-size:.78rem; letter-spacing:.06em;
+    text-transform:uppercase; color:var(--text-dim); margin-bottom:16px;
+  }
+  .specialist-label{ margin-bottom:22px; }
+
+  /* ---------- Projects ---------- */
+  .timeline{ position:relative; padding-left:30px; border-left:1px solid var(--hairline); }
+  .t-item{ position:relative; padding-bottom:44px; }
+  .t-item:last-child{ padding-bottom:0; }
+  .t-item::before{
+    content:''; position:absolute; left:-35px; top:4px;
+    width:9px; height:9px; border-radius:50%;
+    background:var(--bg); border:2px solid var(--accent-2);
+  }
+  .t-meta{
+    font-family:var(--font-mono); font-size:.78rem; color:var(--accent-2);
+    display:flex; gap:14px; flex-wrap:wrap; margin-bottom:8px;
+  }
+  .t-item h3{ font-size:1.05rem; font-weight:600; margin-bottom:6px; }
+  .t-item .client{ color:var(--text-dim); font-size:.88rem; margin-bottom:8px; display:block; }
+  .t-item p{ color:var(--text); font-size:.94rem; max-width:680px; }
+
+  details.history{
+    margin-top:56px; border:1px solid var(--hairline); border-radius:10px;
+    background:var(--surface); overflow:hidden;
+  }
+  details.history summary{
+    cursor:pointer; padding:18px 24px; font-family:var(--font-mono);
+    font-size:.85rem; color:var(--accent); list-style:none;
+  }
+  details.history summary::-webkit-details-marker{ display:none; }
+  details.history summary::before{ content:'▸ '; color:var(--accent-2); }
+  details.history[open] summary::before{ content:'▾ '; }
+  .history-timeline{ padding:8px 24px 28px; }
+  .history-timeline .timeline{ margin-top:8px; }
+
+  /* ---------- Skills ---------- */
+  .skills-columns{ display:grid; grid-template-columns:repeat(3,1fr); gap:44px; }
+  .skills-col h3{
+    font-family:var(--font-mono); font-size:.78rem; letter-spacing:.06em;
+    text-transform:uppercase; color:var(--text-dim); margin-bottom:22px; font-weight:600;
+  }
+  .skill-row{ margin-bottom:16px; }
+  .skill-label{
+    display:flex; justify-content:space-between; gap:10px;
+    font-size:.85rem; margin-bottom:7px;
+  }
+  .skill-label span:last-child{ font-family:var(--font-mono); color:var(--text-dim); font-size:.78rem; }
+  .skill-track{ height:5px; background:var(--surface-2); border-radius:3px; overflow:hidden; }
+  .skill-fill{
+    height:100%; width:var(--w); border-radius:3px;
+    background:linear-gradient(90deg, var(--accent-2), var(--accent));
+  }
+  .skill-fill.filled{ width:var(--w); }
+
+  /* ---------- Background (education / languages) ---------- */
+  .bg-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:44px; }
+  .bg-col h3{
+    font-family:var(--font-mono); font-size:.78rem; letter-spacing:.06em;
+    text-transform:uppercase; color:var(--text-dim); margin-bottom:22px; font-weight:600;
+  }
+  .edu-item{ margin-bottom:20px; }
+  .edu-item:last-child{ margin-bottom:0; }
+  .edu-item .period{ font-family:var(--font-mono); font-size:.78rem; color:var(--accent-2); }
+  .edu-item .school{ font-weight:600; margin-top:4px; }
+  .edu-item .degree{ color:var(--text-dim); font-size:.88rem; margin-top:2px; }
+  .lang-row{ display:flex; justify-content:space-between; padding:10px 0; border-top:1px solid var(--hairline); font-size:.92rem; }
+  .lang-row:first-child{ border-top:none; }
+  .lang-row span:last-child{ font-family:var(--font-mono); color:var(--text-dim); font-size:.8rem; }
+
+  /* ---------- Contact ---------- */
+  .contact-wrap{
+    background:var(--surface); border:1px solid var(--hairline);
+    border-radius:14px; padding:56px; text-align:left;
+    position:relative; overflow:hidden;
+  }
+  .contact-wrap::before{
+    content:''; position:absolute; right:-60px; top:-60px;
+    width:220px; height:220px; border:1px solid var(--hairline); border-radius:50%;
+  }
+  .contact-wrap h2{ font-size:clamp(1.6rem,3.2vw,2.1rem); max-width:520px; position:relative; }
+  .contact-wrap .intro{ color:var(--text-dim); margin-top:16px; max-width:520px; position:relative; }
+  .contact-links{ margin-top:32px; display:flex; gap:16px; flex-wrap:wrap; position:relative; }
+  .contact-meta{ margin-top:36px; font-family:var(--font-mono); font-size:.82rem; color:var(--text-dim); position:relative; }
+
+  main{ background:var(--bg); display:block; }
+  footer{ padding:36px 0; background:var(--bg); }
+
+  .legal-body{ max-width:760px; }
+  .legal-body h3{
+    font-family:var(--font-mono); font-size:.82rem; letter-spacing:.04em;
+    color:var(--accent); text-transform:uppercase; font-weight:600;
+    margin-top:28px; margin-bottom:8px;
+  }
+  .legal-body h3:first-child{ margin-top:0; }
+  .legal-body p{ color:var(--text-dim); font-size:.94rem; margin-bottom:4px; }
+  .legal-body a{ color:var(--accent); text-decoration:underline; text-underline-offset:2px; }
+  .legal-body a:hover{ color:var(--text); }
+
+  .footer-links{ display:flex; gap:20px; flex-wrap:wrap; align-items:center; }
+  .footer-links a{ color:var(--text-dim); transition:color .2s ease; }
+  .footer-links a:hover{ color:var(--accent); }
+  footer .container{
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
+    font-family:var(--font-mono); font-size:.76rem; color:var(--text-dim);
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width:900px){
+    .profile-grid, .card-grid, .skills-columns, .bg-grid{ grid-template-columns:1fr; }
+    .card-grid{ grid-template-columns:repeat(2,1fr); }
+    .stats{ grid-template-columns:repeat(2,1fr); }
+    .contact-wrap{ padding:36px; }
+  }
+  @media (max-width:560px){
+    .card-grid{ grid-template-columns:1fr; }
+    .history-timeline{ padding:8px 16px 24px; }
+    .section{ padding:64px 0; }
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    html{ scroll-behavior:auto; }
+    .reveal{ opacity:1; transform:none; transition:none; }
+    .cursor{ animation:none; }
+    .skill-fill{ transition:none; }
+    .card:hover{ transform:none; }
+  }
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to content</a>
+
+<nav class="site-nav">
+  <div class="container">
+    <div class="brand">
+      <span class="brand-mark">HM</span>
+      <span>HENRYK&nbsp;MERTIN</span>
+    </div>
+    <div class="nav-links">
+      <a href="#profile">Profile</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#background">Background</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container">
+    <div class="eyebrow">Berlin, Germany</div>
+    <h1>Henryk Mertin</h1>
+    <p class="role">Senior SAP Consultant &amp; Project Manager — <strong>Financials, Financial Supply Chain Management &amp; Real Estate Accounting</strong>. Turning finance and tax requirements into robust SAP solutions since 1996.</p>
+
+    <div class="terminal">
+      <span class="prompt">&gt;</span>
+      <span class="type-target" id="typewriter"></span>
+      <span class="cursor"></span>
+    </div>
+
+    <div class="cta-row">
+      <a class="btn btn-primary" href="https://www.linkedin.com/in/henrykmertin/" target="_blank" rel="noopener">Connect on LinkedIn ↗</a>
+      <a class="btn btn-secondary" href="https://www.freelance.de/Freiberufler/137044" target="_blank" rel="noopener">freelance.de profile ↗</a>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><div class="num">30+</div><div class="label">Years in SAP</div></div>
+      <div class="stat"><div class="num">15+</div><div class="label">Years independent</div></div>
+      <div class="stat"><div class="num">20+</div><div class="label">Full-cycle &amp; template rollouts</div></div>
+      <div class="stat"><div class="num">4</div><div class="label">Continents worked on</div></div>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- PROFILE -->
+  <section class="section" id="profile">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow">About</div>
+        <h2>Bridging finance requirements and SAP depth</h2>
+      </div>
+      <div class="profile-grid">
+        <div class="profile-text reveal">
+          <p>Since being introduced to SAP as a student in 1995, I've spent three decades building deep expertise across SAP Financials and Controlling — from the day-to-day core of Accounts Payable, Accounts Receivable, Fixed Assets and the General Ledger, through Cost Center Accounting and Internal Orders in CO, to Financial Supply Chain Management. In November 2011 I stepped out on my own, founding an independent SAP consulting practice focused on complex, international finance transformations.</p>
+          <p>My work sits at the intersection of business and system: translating real-world requirements — tax law, treasury regulation, lease accounting — into robust SAP configuration, customizing and ABAP-supported solutions. I've contributed to more than 15 full-cycle and template rollouts across North and South America, Asia, Africa and Europe, alongside hands-on knowledge of LSMW, SAP-BI, Business Objects reporting and ABAP user exits/BADIs.</p>
+          <p class="pull-quote">An effective communicator and integrator — bridging business requirements with the technical and functional depth of SAP.</p>
+        </div>
+        <div class="industries-box reveal">
+          <h3>Industries served</h3>
+          <div class="pill-row">
+            <span class="pill">Consumer Goods</span>
+            <span class="pill">Cosmetics</span>
+            <span class="pill">Real Estate</span>
+            <span class="pill">Pharmaceuticals</span>
+            <span class="pill">Food Manufacturing</span>
+            <span class="pill">Oil &amp; Gas</span>
+            <span class="pill">Waste Management</span>
+            <span class="pill">Banking Services</span>
+            <span class="pill">Beverage Industry</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERTISE -->
+  <section class="section" id="expertise">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow">Expertise</div>
+        <h2>Full-scope SAP FI/CO — with specialist depth on top</h2>
+        <p class="intro">Every engagement starts with solid, full-scope SAP Finance &amp; Controlling. On top of that foundation, my practice concentrates on the specialist corners of SAP Finance that most consultants only touch occasionally.</p>
+      </div>
+
+      <div class="core-coverage reveal">
+        <div class="core-label">Core coverage — every engagement starts here</div>
+        <div class="pill-row">
+          <span class="pill">FI-GL · General Ledger</span>
+          <span class="pill">FI-AP · Accounts Payable</span>
+          <span class="pill">FI-AR · Accounts Receivable</span>
+          <span class="pill">FI-AA · Fixed Assets</span>
+          <span class="pill">CO-CCA · Cost Center Accounting</span>
+          <span class="pill">CO-IO · Internal Orders</span>
+          <span class="pill">EC-PCA · Profit Center Accounting</span>
+          <span class="pill">PS · Project System</span>
+          <span class="pill">CO-PA · Profitability Analysis</span>
+          <span class="pill">ABAP · User Exits &amp; Enhancements</span>
+          <span class="pill">LSMW · Data Migration</span>
+        </div>
+      </div>
+
+      <div class="specialist-label reveal">Specialist depth</div>
+      <div class="card-grid">
+        <div class="card reveal">
+          <span class="tag">RE-FX · IFRS16</span>
+          <h3>Real Estate &amp; Lease Accounting</h3>
+          <p>Master data management, lease contract accounting under IFRS 16, and German-specific input tax distribution/correction (§15a UStG) for real estate portfolios and pension funds.</p>
+        </div>
+        <div class="card reveal">
+          <span class="tag">SAP AFC</span>
+          <h3>Advanced Financial Closing (Cloud)</h3>
+          <p>Backend customizing of templates, tasks and validation/adapter classes; global rollout of the SAP Cloud close-orchestration tool across a 70-country group.</p>
+        </div>
+        <div class="card reveal">
+          <span class="tag">DRC · eReporting</span>
+          <h3>Document &amp; Reporting Compliance</h3>
+          <p>Business blueprints and configuration for statutory and VAT eReporting across Serbia, Poland, Bulgaria, Portugal, Romania, France and Hungary.</p>
+        </div>
+        <div class="card reveal">
+          <span class="tag">FSCM-TRM</span>
+          <h3>Treasury &amp; Trade Repository Reporting</h3>
+          <p>EMIR / EMIR Refit and UK MiR reporting, Bloomberg trading interfaces, exposure management 2.0, and MT300/MT310 matching for FX and money-market trades.</p>
+        </div>
+        <div class="card reveal">
+          <span class="tag">FSCM · ICM / CM</span>
+          <h3>Inhouse Cash &amp; Credit Management</h3>
+          <p>Global rollout of SAP Inhouse Cash and FSCM Credit Management, including BADI-based customizing and cross-company data migration.</p>
+        </div>
+        <div class="card reveal">
+          <span class="tag">FI-AA · New&nbsp;GL</span>
+          <h3>Fixed Assets &amp; Ledger Harmonization</h3>
+          <p>Worldwide New GL migrations and chart-of-account harmonization (25 countries, 52 companies), plus fixed-asset redesigns for IFRS 16 lease integration.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow">Track record</div>
+        <h2>Selected projects</h2>
+        <p class="intro">A timeline of recent engagements. The full project history — more than 25 assignments since 1996 — is below.</p>
+      </div>
+
+      <div class="timeline reveal">
+        <div class="t-item">
+          <div class="t-meta"><span>05/2026 – 06/2026</span><span>Berlin, Germany</span></div>
+          <h3>Bank statement automation in RE-FX</h3>
+          <span class="client">Sirius Facilities GmbH — Real Estate</span>
+          <p>Redesigned electronic bank statement processing with a custom user-exit, lifting automated posting matching to 85% in an RE-FX environment.</p>
+        </div>
+        <div class="t-item">
+          <div class="t-meta"><span>01/2025 – 03/2026</span><span>Hamburg, Germany</span></div>
+          <h3>RE-FX "light" for a €240M real estate portfolio</h3>
+          <span class="client">Beiersdorf Shared Services / TROMA Pension Funds</span>
+          <p>Rebuilt RE-FX master data management for the pension fund's real estate holdings, with a focus on German input-tax specifics and admin-company interfaces.</p>
+        </div>
+        <div class="t-item">
+          <div class="t-meta"><span>03/2025 – ongoing</span><span>Switzerland / worldwide</span></div>
+          <h3>Global S/4 CFIN Treasury rollout</h3>
+          <span class="client">Nestlé S.A. via PwC — Professional Services</span>
+          <p>Supporting one of the largest S/4HANA Treasury implementations worldwide: Trade Repository reporting, a Bloomberg trading interface, and automated posting of commercial paper via BAPI.</p>
+        </div>
+        <div class="t-item">
+          <div class="t-meta"><span>12/2024 – ongoing</span><span>Hamburg, Germany</span></div>
+          <h3>eReporting blueprints across seven countries</h3>
+          <span class="client">Beiersdorf Shared Services</span>
+          <p>Statutory and VAT eReporting blueprints for Serbia, Poland, Bulgaria, Portugal, Romania, France and Hungary, configuring SAP DRC and FI.</p>
+        </div>
+        <div class="t-item">
+          <div class="t-meta"><span>05/2024 – 01/2025</span><span>Dresden, Germany</span></div>
+          <h3>S/4HANA greenfield finance implementation</h3>
+          <span class="client">NTT Data / Stadtreinigung Dresden GmbH</span>
+          <p>Full FI sub-ledger build on a greenfield approach, application testing and data-conversion support.</p>
+        </div>
+        <div class="t-item">
+          <div class="t-meta"><span>2021 – 2024</span><span>Hamburg, Germany</span></div>
+          <h3>Global S/4HANA upgrade &amp; system consolidation</h3>
+          <span class="client">Beiersdorf Shared Services</span>
+          <p>Bluefield migration with a focus on FI-AA and RE-FX under IFRS 16, alongside the worldwide SAP AFC rollout across 70 countries.</p>
+        </div>
+        <div class="t-item">
+          <div class="t-meta"><span>2018 – 2019</span><span>Zürich, Switzerland</span></div>
+          <h3>Technical lead, global IFRS 16 / RE-FX rollout</h3>
+          <span class="client">Barry Callebaut AG</span>
+          <p>Coordinated six consultants, owned the customizing blueprint, and built the FI-AA / RE-FX integration.</p>
+        </div>
+        <div class="t-item">
+          <div class="t-meta"><span>2016 – 2017</span><span>Zürich, Switzerland</span></div>
+          <h3>Worldwide New GL redesign</h3>
+          <span class="client">Barry Callebaut Services N.V.</span>
+          <p>Technical lead converting ABAP developments to a multi-ledger approach across 25 countries and 52 companies.</p>
+        </div>
+        <div class="t-item">
+          <div class="t-meta"><span>2011 – 2018</span><span>Switzerland, Belgium, Singapore, US &amp; beyond</span></div>
+          <h3>Global treasury &amp; payment rollouts</h3>
+          <span class="client">Barry Callebaut Services N.V.</span>
+          <p>Blueprinted a new global payment solution with JP Morgan, redesigned Inhouse Cash, and implemented SEPA XML bank communication.</p>
+        </div>
+        <div class="t-item">
+          <div class="t-meta"><span>2008 – 2011</span><span>Zürich, Switzerland</span></div>
+          <h3>Teamlead, SAP Financials, Treasury &amp; BW</h3>
+          <span class="client">Barry Callebaut AG</span>
+          <p>Led 6 internal and roughly 8 external consultants as corporate template guardian for FI, CO, FSCM and BI.</p>
+        </div>
+      </div>
+
+      <details class="history reveal">
+        <summary>Show full project history (1996 – 2026)</summary>
+        <div class="history-timeline">
+          <div class="timeline">
+            <div class="t-item">
+              <div class="t-meta"><span>10/2023 – 08/2024</span><span>Wieze / Zürich</span></div>
+              <h3>FSCM-TRM EMIR Refit re-implementation</h3>
+              <span class="client">Barry Callebaut Services Belgium</span>
+              <p>Re-implemented EMIR reporting with the Trade Repository at Unavista / London Stock Exchange, including DMEE specifications and BADIs.</p>
+            </div>
+            <div class="t-item">
+              <div class="t-meta"><span>05/2023 – 05/2024</span><span>Wieze / Zürich</span></div>
+              <h3>FSCM-TRM FX-Exposure Management 2.0</h3>
+              <span class="client">Barry Callebaut Services Belgium</span>
+              <p>Implemented FX Exposure Management 2.0 with third-party trading-software integration, ABAP specifications and rollout.</p>
+            </div>
+            <div class="t-item">
+              <div class="t-meta"><span>05/2024 – 11/2024</span><span>Wieze / Zürich</span></div>
+              <h3>FSCM Credit Management global rollout</h3>
+              <span class="client">Barry Callebaut Services Belgium</span>
+              <p>Customizing, user exits and BADIs, integration testing and go-live support for the global Credit Management rollout.</p>
+            </div>
+            <div class="t-item">
+              <div class="t-meta"><span>06/2022 – 10/2024</span><span>Hamburg, Germany</span></div>
+              <h3>SAP AFC — worldwide rollout</h3>
+              <span class="client">Beiersdorf Shared Services</span>
+              <p>Advanced Financial Closing rollout across 70 countries: templates, tasks and user-exits, with migration from ERP to S/4HANA.</p>
+            </div>
+            <div class="t-item">
+              <div class="t-meta"><span>08/2021 – 12/2023</span><span>Hamburg, Germany</span></div>
+              <h3>IFRS 16 RE-FX-LA / FI-AA re-engineering</h3>
+              <span class="client">Beiersdorf Shared Services</span>
+              <p>As-is analysis, coaching of local consultants, ticket-backlog resolution and harmonization of the existing IFRS 16 solution.</p>
+            </div>
+            <div class="t-item">
+              <div class="t-meta"><span>05/2021 – 07/2021</span><span>Berlin, Germany</span></div>
+              <h3>SAP Accrual Engine setup</h3>
+              <span class="client">Deutsche Wohnen SE</span>
+              <p>Set up the Accrual Engine and implemented the related monthly processes.</p>
+            </div>
+            <div class="t-item">
+              <div class="t-meta"><span>04/2021 – 11/2021</span><span>Frankfurt, Germany</span></div>
+              <h3>FI/CO migration in a German carve-out</h3>
+              <span class="client">Sanofi-Aventis Deutschland GmbH</span>
+              <p>Supported the carve-out with data-migration strategy, test plans, integration and UAT testing, and cutover planning.</p>
+            </div>
+            <div class="t-item">
+              <div class="t-meta"><span>02/2021 – 05/2021</span><span>Malaysia (via CH / BE)</span></div>
+              <h3>SAP Finance rollout Malaysia</h3>
+              <span class="client">Barry Callebaut AG</span>
+              <p>Blueprint and customizing of Finance sub-ledgers, FSCM-TRM, RE-FX IFRS 16 contracts, and migration of all Finance objects.</p>
+            </div>
+            <div class="t-item">
+              <div class="t-meta"><span>09/2020 – 02/2021</span><span>Berlin, Germany</span></div>
+              <h3>SAP Business Partner optimization</h3>
+              <span class="client">Deutsche Wohnen SE</span>
+              <p>Data-quality analysis, root-cause resolution of Post Processing Office issues, and BADI/BDT validations.</p>
+            </div>
+            <div class="t-item">
+              <div class="t-meta"><span>03/2020 – 03/2021</span><span>Berlin, Germany</span></div>
+              <h3>Bank statement &amp; payment-run optimization</h3>
+              <span class="client">Deutsche Wohnen SE</span>
+              <p>Re-standardized electronic bank statement processing and optimized payment runs (F110/F111) for FI, Treasury and CML-Loans.</p>
+            </div>
+            <div class="t-item">
+              <div class="t-meta"><span>10/2019 – 06/2020</span><span>Berlin, Germany</span></div>
+              <h3>RE-FX / FI-AA IFRS 16 implementation</h3>
+              <span class="client">Deutsche Wohnen SE</span>
+              <p>Blueprint, customizing, BADI specifications, data migration, training and go-live support for a real-estate IFRS 16 solution.</p>
+            </div>
+            <div class="t-item">
+              <div class="t-meta"><span>02/2018 – 10/2018</span><span>Wieze / Zürich</span></div>
+              <h3>Financial Excellence — SD, CO-PA &amp; Salesforce</h3>
+              <span class="client">Barry Callebaut Services N.V.</span>
+              <p>Lead consultant of 7 IT resources, harmonizing order-to-cash processes, account determinations and CO-PA integration.</p>
+            </div>
+            <div class="t-item">
+              <div class="t-meta"><span>08/2013 – 02/2017</span><span>Berlin, Germany</span></div>
+              <h3>SAP Finance projects &amp; integration</h3>
+              <span class="client">Gazprom Germania GmbH</span>
+              <p>Project management, an accounting interface for gas invoicing, SAP-BW COPA reporting, and a New GL / consolidation interface.</p>
+            </div>
+            <div class="t-item">
+              <div class="t-meta"><span>11/2014 – 11/2015</span><span>Wieze, Belgium</span></div>
+              <h3>Initial FSCM EMIR / Trade Repository reporting</h3>
+              <span class="client">Barry Callebaut Services N.V.</span>
+              <p>Initial setup of EMIR reporting at Unavista / LSE, with redesigned FXALL interfaces for FX and money-market trades.</p>
+            </div>
+            <div class="t-item">
+              <div class="t-meta"><span>11/2011 – 11/2018</span><span>CH, BE, SG, US &amp; more</span></div>
+              <h3>Various SAP payment projects</h3>
+              <span class="client">Barry Callebaut Services N.V.</span>
+              <p>Global JP Morgan payment rollout, Inhouse Cash redesign, and SEPA XML bank communication.</p>
+            </div>
+            <div class="t-item">
+              <div class="t-meta"><span>11/2011 – 11/2018</span><span>CH, BE, SG, MY, TR, BR</span></div>
+              <h3>Various freelance rollout projects</h3>
+              <span class="client">Barry Callebaut Services N.V.</span>
+              <p>LSMW data migration, Malaysia GST reporting, Singapore / Turkey / Brazil rollouts, and Ivory Coast optimization.</p>
+            </div>
+            <div class="t-item">
+              <div class="t-meta"><span>08/2006 – 12/2007</span><span>Berlin / Hannover</span></div>
+              <h3>Senior SAP consultant, banking</h3>
+              <span class="client">FinanzIT GmbH</span>
+              <p>Banking template rollout to Sparkassen across SAP FI, CO and MM.</p>
+            </div>
+            <div class="t-item">
+              <div class="t-meta"><span>07/2002 – 07/2006</span><span>Berlin / Hannover</span></div>
+              <h3>SD consultant / project manager</h3>
+              <span class="client">FinanzIT GmbH</span>
+              <p>Peregrine Assetcenter implementation, SAP CS module, and FI / SD / CS consulting.</p>
+            </div>
+            <div class="t-item">
+              <div class="t-meta"><span>07/2000 – 06/2002</span><span>Berlin, Germany</span></div>
+              <h3>SAP project manager / teamlead</h3>
+              <span class="client">dvs Datenverarbeitungsgesellschaft Sparkassenorganisation</span>
+              <p>Full-cycle implementations, Euro currency conversion, and SAP archiving via FileNet.</p>
+            </div>
+            <div class="t-item">
+              <div class="t-meta"><span>06/1998 – 06/2000</span><span>Berlin, Germany</span></div>
+              <h3>Teamlead &amp; consultant, SAP Finance / CO</h3>
+              <span class="client">Coca-Cola Erfrischungsgetränke</span>
+              <p>Document archiving, release upgrade, and template rollouts to roughly 30 plants.</p>
+            </div>
+            <div class="t-item">
+              <div class="t-meta"><span>07/1996 – 06/1998</span><span>Berlin, Germany</span></div>
+              <h3>Junior consultant, SAP Finance</h3>
+              <span class="client">Coca-Cola Erfrischungsgetränke</span>
+              <p>Full-cycle R/3 FI implementation, a data-warehouse solution (Cognos), and PC-Konsol consolidation.</p>
+            </div>
+          </div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow">Capabilities</div>
+        <h2>Skills at a glance</h2>
+        <p class="intro">30 years across SAP R/2, R/3 and S/4HANA — self-rated experience depth by area.</p>
+      </div>
+      <div class="skills-columns reveal">
+        <div class="skills-col">
+          <h3>Leadership &amp; Architecture</h3>
+          <div class="skill-row"><div class="skill-label"><span>IT/Project &amp; Team Management</span><span>20+ yrs</span></div><div class="skill-track"><div class="skill-fill" style="--w:100%"></div></div></div>
+          <div class="skill-row"><div class="skill-label"><span>SAP/IT Architecture &amp; Template Lead</span><span>15 yrs</span></div><div class="skill-track"><div class="skill-fill" style="--w:100%"></div></div></div>
+        </div>
+        <div class="skills-col">
+          <h3>Financials &amp; FSCM Modules</h3>
+          <div class="skill-row"><div class="skill-label"><span>SAP FI (GL, AP, AR, AA, SL, LC)</span><span></span></div><div class="skill-track"><div class="skill-fill" style="--w:100%"></div></div></div>
+          <div class="skill-row"><div class="skill-label"><span>SAP AFC (Cloud)</span><span>3 yrs</span></div><div class="skill-track"><div class="skill-fill" style="--w:100%"></div></div></div>
+          <div class="skill-row"><div class="skill-label"><span>SAP RE-FX (Lease, FI/CO, Tax)</span><span></span></div><div class="skill-track"><div class="skill-fill" style="--w:80%"></div></div></div>
+          <div class="skill-row"><div class="skill-label"><span>FSCM (Treasury/TRM, Inhouse Cash)</span><span></span></div><div class="skill-track"><div class="skill-fill" style="--w:80%"></div></div></div>
+          <div class="skill-row"><div class="skill-label"><span>FSCM Credit Management</span><span></span></div><div class="skill-track"><div class="skill-fill" style="--w:80%"></div></div></div>
+          <div class="skill-row"><div class="skill-label"><span>SAP CO (Cost Center Accounting, Internal Orders, CO-PA) / EC-PCA</span><span></span></div><div class="skill-track"><div class="skill-fill" style="--w:80%"></div></div></div>
+          <div class="skill-row"><div class="skill-label"><span>SAP CO-PC / PS</span><span></span></div><div class="skill-track"><div class="skill-fill" style="--w:60%"></div></div></div>
+          <div class="skill-row"><div class="skill-label"><span>SAP PP / MM / SD / CS</span><span></span></div><div class="skill-track"><div class="skill-fill" style="--w:40%"></div></div></div>
+        </div>
+        <div class="skills-col">
+          <h3>Development &amp; Tools</h3>
+          <div class="skill-row"><div class="skill-label"><span>ABAP User Exits, BADIs &amp; Enhancements</span><span></span></div><div class="skill-track"><div class="skill-fill" style="--w:80%"></div></div></div>
+          <div class="skill-row"><div class="skill-label"><span>Complex ABAP/Interface Specifications</span><span></span></div><div class="skill-track"><div class="skill-fill" style="--w:100%"></div></div></div>
+          <div class="skill-row"><div class="skill-label"><span>LSMW &amp; Data Migration</span><span></span></div><div class="skill-track"><div class="skill-fill" style="--w:100%"></div></div></div>
+          <div class="skill-row"><div class="skill-label"><span>SAPScript / Smartforms</span><span></span></div><div class="skill-track"><div class="skill-fill" style="--w:80%"></div></div></div>
+          <div class="skill-row"><div class="skill-label"><span>SAP-BI / Business Objects Reporting</span><span></span></div><div class="skill-track"><div class="skill-fill" style="--w:70%"></div></div></div>
+          <div class="skill-row"><div class="skill-label"><span>SAP DRC (eReporting)</span><span></span></div><div class="skill-track"><div class="skill-fill" style="--w:75%"></div></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BACKGROUND -->
+  <section class="section" id="background">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow">Background</div>
+        <h2>Education &amp; languages</h2>
+      </div>
+      <div class="bg-grid reveal">
+        <div class="bg-col">
+          <h3>Education</h3>
+          <div class="edu-item">
+            <div class="period">1990 – 1996</div>
+            <div class="school">HTW Berlin (Fachhochschule für Technik und Wirtschaft), Germany</div>
+            <div class="degree">Business Informatics — Diplom-Wirtschaftsinformatiker (FH)</div>
+          </div>
+          <div class="edu-item">
+            <div class="period">1993 – 1994</div>
+            <div class="school">De Montfort University, Leicester, UK</div>
+            <div class="degree">Computing / Marketing — exchange student</div>
+          </div>
+          <div class="edu-item">
+            <div class="period">1989</div>
+            <div class="school">Togliatti Institute of Engineering &amp; Economy, St. Petersburg, Russia</div>
+            <div class="degree">Business Informatics</div>
+          </div>
+        </div>
+        <div class="bg-col">
+          <h3>Languages</h3>
+          <div class="lang-row"><span>German</span><span>Native</span></div>
+          <div class="lang-row"><span>English</span><span>Fluent</span></div>
+          <div class="lang-row"><span>Russian</span><span>Basic</span></div>
+          <div class="lang-row"><span>Turkish</span><span>Basic</span></div>
+        </div>
+        <div class="bg-col">
+          <h3>Working regions</h3>
+          <p style="color:var(--text-dim); font-size:.92rem;">Rollouts and consulting engagements across Germany, Switzerland, Belgium, the UK, Singapore, Malaysia, Turkey, Brazil, the US, Canada, Japan and Ivory Coast.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="contact-wrap reveal">
+        <div class="eyebrow">Get in touch</div>
+        <h2>Let's talk about your SAP Finance challenge</h2>
+        <p class="intro">Whether it's RE-FX under IFRS 16, a SAP AFC rollout, DRC eReporting, or an FSCM Treasury implementation — happy to discuss scope and fit.</p>
+        <div class="contact-links">
+          <a class="btn btn-primary" href="https://www.linkedin.com/in/henrykmertin/" target="_blank" rel="noopener">Connect on LinkedIn ↗</a>
+          <a class="btn btn-secondary" href="https://www.freelance.de/Freiberufler/137044" target="_blank" rel="noopener">freelance.de profile ↗</a>
+        </div>
+        <div class="contact-meta">Based in Berlin, Germany — available for engagements across Europe and beyond.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEGAL: IMPRINT -->
+  <section class="section legal" id="imprint">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow">Legal</div>
+        <h2>Impressum</h2>
+        <p class="intro">Angaben gemäß § 5 DDG (Digitale-Dienste-Gesetz).</p>
+      </div>
+      <div class="legal-body reveal">
+        <h3>Diensteanbieter</h3>
+        <p>Henryk Mertin<br>
+        Danziger Straße 122<br>
+        10407 Berlin<br>
+        Deutschland</p>
+
+        <h3>Kontakt</h3>
+        <p>Telefon: +49&nbsp;30&nbsp;81886595<br>
+        E-Mail: <a href="mailto:Henryk.Berlin@gmail.com">Henryk.Berlin@gmail.com</a></p>
+
+        <h3>Umsatzsteuer-Identifikationsnummer</h3>
+        <p>USt-IdNr. gemäß § 27a Umsatzsteuergesetz: DE288105132</p>
+
+        <h3>Verantwortlich für den Inhalt (§ 18 Abs. 2 MStV)</h3>
+        <p>Henryk Mertin, Anschrift wie oben.</p>
+
+        <h3>Haftung für Inhalte</h3>
+        <p>Als Diensteanbieter bin ich gemäß § 7 Abs. 1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 DDG bin ich als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
+
+        <h3>Haftung für Links</h3>
+        <p>Dieses Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte ich keinen Einfluss habe. Deshalb kann ich für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEGAL: PRIVACY -->
+  <section class="section legal" id="privacy">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow">Legal</div>
+        <h2>Datenschutzerklärung</h2>
+      </div>
+      <div class="legal-body reveal">
+        <h3>Überblick</h3>
+        <p>Diese Website ist eine reine Informationsseite. Sie setzt keine Cookies, verwendet kein Tracking, keine Analyse-Werkzeuge und keine Kontaktformulare. Es werden keine personenbezogenen Daten aktiv von Ihnen erhoben.</p>
+
+        <h3>Verantwortlicher</h3>
+        <p>Henryk Mertin, Danziger Straße 122, 10407 Berlin, Deutschland. Kontakt: <a href="mailto:Henryk.Berlin@gmail.com">Henryk.Berlin@gmail.com</a></p>
+
+        <h3>Server-Logfiles beim Hosting</h3>
+        <p>Beim Aufruf dieser Website werden durch den Hosting-Anbieter technisch bedingt automatisch Informationen verarbeitet, die Ihr Browser übermittelt (z. B. IP-Adresse, Datum und Uhrzeit des Zugriffs, aufgerufene Datei, übertragene Datenmenge, verwendeter Browser und Betriebssystem). Diese Verarbeitung erfolgt zur Gewährleistung eines störungsfreien Betriebs und der Sicherheit auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse). Umfang und Speicherdauer richten sich nach den Bestimmungen des jeweiligen Hosting-Anbieters.</p>
+
+        <h3>Externe Links</h3>
+        <p>Beim Anklicken der Links zu LinkedIn und freelance.de gelten die Datenschutzbestimmungen der jeweiligen Anbieter. Auf deren Datenverarbeitung habe ich keinen Einfluss.</p>
+
+        <h3>Ihre Rechte</h3>
+        <p>Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung Ihrer personenbezogenen Daten, ein Widerspruchsrecht sowie ein Beschwerderecht bei der zuständigen Aufsichtsbehörde.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <span>© 2026 Henryk Mertin — SAP Consultant, Berlin</span>
+    <span class="footer-links">
+      <a href="#imprint">Impressum</a>
+      <a href="#privacy">Datenschutz</a>
+      <span>No cookies, no trackers.</span>
+    </span>
+  </div>
+</footer>
+
+<script>
+  // Typewriter effect cycling through expertise areas
+  (function(){
+    var el = document.getElementById('typewriter');
+    var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var items = [
+      'RE-FX :: IFRS16 LEASE ACCOUNTING',
+      'SAP AFC :: ADVANCED FINANCIAL CLOSING',
+      'DRC :: STATUTORY eREPORTING',
+      'FSCM-TRM :: TREASURY & TRADE REPOSITORY',
+      'FSCM :: INHOUSE CASH & CREDIT MGMT',
+      'FI-AA :: FIXED ASSETS & NEW GL'
+    ];
+
+    if(reduced){
+      el.textContent = items[0];
+      return;
+    }
+
+    var itemIndex = 0, charIndex = 0, deleting = false;
+    var typeSpeed = 42, deleteSpeed = 22, holdTime = 1400, gapTime = 300;
+
+    function tick(){
+      var current = items[itemIndex];
+      if(!deleting){
+        charIndex++;
+        el.textContent = current.slice(0, charIndex);
+        if(charIndex === current.length){
+          deleting = true;
+          setTimeout(tick, holdTime);
+          return;
+        }
+        setTimeout(tick, typeSpeed);
+      } else {
+        charIndex--;
+        el.textContent = current.slice(0, charIndex);
+        if(charIndex === 0){
+          deleting = false;
+          itemIndex = (itemIndex + 1) % items.length;
+          setTimeout(tick, gapTime);
+          return;
+        }
+        setTimeout(tick, deleteSpeed);
+      }
+    }
+    tick();
+  })();
+</script>
+</body>
+</html>
